@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+form {
+    padding: 10px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#name,
+#age {
+    padding: 5px;
+}
+
+#submit {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #0f0feb;
+    color: aliceblue;
+    border: 0px;
+}
+
+#submit:hover {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: blue;
+    color: aliceblue;
+    border: 0px;
+}
