@@ -1,5 +1,6 @@
 let form = document.querySelector("form");
 
+
 form.addEventListener("submit", () => {
     getData();
 })
@@ -17,5 +18,28 @@ function getData() {
 
     arr.push(obj);
     localStorage.setItem("user_details", JSON.stringify(arr));
-    console.log(user_details);
+    displayOnDom(arr);
 }
+
+function displayOnDom(arr) {
+    let thead = document.querySelector("thead");
+    let tbody = document.querySelector("tbody");
+    tbody.innerHTML = "";
+
+    arr.forEach(ele => {
+        thead.innerHTML = "";
+        let thName = document.createElement("th");
+        let thAge = document.createElement("th");
+        thAge.innerText = "Age";
+        thName.innerText = "Name";
+        thead.append(thName, thAge);
+
+        let tr = document.createElement("tr");
+        let tdName = document.createElement("td");
+        tdName.innerText = ele.name;
+        let tdAge = document.createElement("td")
+        tdAge.innerText = ele.age;
+        tr.append(tdName, tdAge);
+        tbody.append(tr);
+    });
+}  
